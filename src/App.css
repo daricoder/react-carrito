@@ -1,3 +1,19 @@
+:root {
+  --dark-strong: black;
+  --dark-medium: #282c34;
+  --dark-light: #171a1f;
+  --dark-light-light: #1f2229;
+  --light-dark: #9e9e9e;
+  --light: #b3b3b3;
+  --green-light: #3cab82;
+  --blue-light: #2793e6;
+  --blue-light: 39, 147, 230;
+  --warn-dark: #c97c38;
+  --warn: #e68d27;
+  --error-dark: #a12038;
+  --error: #ed1556;
+}
+
 .App {
   text-align: center;
 }
@@ -14,7 +30,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--dark-medium);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +51,267 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.button {
+  color: var(--light-dark);
+  /* padding: 8px; */
+  background-color: var(--dark-light);
+  cursor: pointer;
+  border-radius: 5px;
+  user-select:none
+}
+
+.button-item {
+  transition-duration: 0.4s;
+  /* background-color: var(--light-dark); */
+  /* color: var(--dark-strong); */
+  /* border: 2px solid #008cba; */
+}
+
+.button-item:hover {
+  background-color: var(--warn-dark);
+  color: #b3b3b3;
+}
+
+table {
+  /* border: 2px solid black; */
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+tbody,
+thead {
+  color: var(--light-dark);
+}
+tbody > tr {
+  transition-duration: 0.15s;
+}
+tbody > tr:hover {
+  background-color: var(--green-light);
+  color: black !important;
+}
+thead {
+  background-color: var(--dark-light);
+}
+
+td,
+th {
+  /* border: 2px solid black; */
+  /* transition-duration:0.2s;  */
+  padding: 8px;
+}
+td{
+font-weight: 300;
+text-align: left;
+}
+th{
+text-align: center;
+font-style:oblique;
+font-weight: 900;
+
+}
+
+tr:nth-child(even) {
+  background-color: var(--dark-light-light);
+}
+tr.row-disabled {
+  /* border: 1px solid var(--dark-strong); */
+  pointer-events: none;
+  background-color: var(--warn-dark) !important;
+}
+tr.row-disabled > td {
+  color: var(--dark-medium);
+}
+
+svg {
+  width: 100%;
+}
+
+div.button-neumorphism {
+  /* display: inline-block;     */
+  /* position:relative; */
+  /* padding: 20px; */
+  /* display:flex; */
+  /* float:right; */
+  /* width:100%; */
+  /* height:100px; */
+  /* height:50px; */
+  /* width:20px; */
+  /* height:4vw; */
+  /* height:auto; */
+  /* padding-top:100%; */
+  /* padding:10px; */
+  cursor: pointer;
+  transition-duration: 0.2s;
+  background: linear-gradient(145deg, #2b2f38, #24282f);
+  /* box-shadow:  6px 6px 12px #22262d, */
+  /* -6px -6px 12px #2e323b; */
+  box-shadow: 5px 5px 10px #1a1c21, -5px -5px 10px #363c47;
+  margin-left: auto;
+}
+
+.p-10 {
+  padding: 10px;
+}
+.b-radious-25 {
+  border-radius: 25px;
+}
+
+div.button-neumorphism-green {
+  color: var(--dark-medium);
+  cursor: pointer;
+  transition-duration: 0.2s;
+  /* border-radius: 12px; */
+  background: linear-gradient(145deg, #40b78b, #369a75);
+  /* box-shadow:  6px 6px 12px #22262d, */
+  /* -6px -6px 12px #2e323b; */
+  box-shadow: 5px 5px 10px #33916f, -5px -5px 10px #45c596;
+}
+div.button-neumorphism:hover {
+  /* transform:scale(1.05); */
+  /* color: var(--light-dark); */
+  color: var(--green-light);
+  /* border-radius: 12px; */
+  background: linear-gradient(145deg, #24282f, #2b2f38);
+  box-shadow: 5px 5px 13px #252830, -5px -5px 13px #2b3038;
+}
+div.button-neumorphism-green:hover {
+  /* transform:scale(1.05); */
+  /* color: var(--light-dark); */
+  /* border-radius: 12px; */
+  background: linear-gradient(145deg, #369a75, #40b78b);
+}
+div.button-neumorphism-green:active {
+  /* transform:scale(1.05); */
+  /* color: var(--light-dark); */
+  /* border-radius: 12px; */
+  background: #3cab82;
+  box-shadow: inset 18px 18px 36px #33916f, inset -18px -18px 36px #45c596;
+}
+div.button-neumorphism:active {
+  color: var(--green-light);
+  background: #282c34;
+  box-shadow: inset 6px 6px 12px #22262d, inset -6px -6px 12px #2e323b;
+}
+
+.error {
+  color: var(--error-medium-light);
+}
+.link {
+  text-decoration: none !important;
+}
+.grid-CarritoDetail {
+   display:grid;
+   grid-template-areas: 
+   'header'
+   'main'
+   'footer'
+   ;
+   row-gap: 10px;
+
+
+}
+.grid-CarritoDetail > div:nth-child(1){
+ grid-area:'header';
+}
+.grid-CarritoDetail > div:nth-child(1) > div{
+    color : var(--light-dark);
+    font-size: 28px ;
+    font-style: oblique;
+    padding: 5px 0 5px 10px;
+}
+.grid-CarritoDetail > div:nth-child(2){
+ grid-area:'main';
+
+}
+.grid-CarritoDetail > div:nth-child(3){
+ grid-area:'footer';
+ /* padding:20px; */
+ /* justify-self:center */
+
+}
+
+.grid-CarritoDetail > div:nth-child(3) > .button{
+    padding:20px;
+    text-align:center;
+    user-select:none;
+}
+.grid-CarritoDetail > div:nth-child(3) > .button:hover{
+    /* transform:scale(1.04)    */
+}
+/* .container{ */
+/*     margin:10px 0 0 10px; */
+/*     display:flex; */
+/*     justify-content: center  */
+/* } */
+.margin-top {
+  margin-top: 10px;
+}
+.margin-bottom {
+  margin-bottom: 10px;
+}
+.container-flex {
+  display: flex;
+}
+.container-justify-start {
+  justify-content: flex-start;
+}
+.container-justify-center {
+  justify-content: center;
+}
+.container-justify-end {
+  justify-content: flex-end;
+}
+.container-align-items-center {
+  align-items: center;
+}
+
+.p-top {
+  padding-top: 10px;
+}
+.p-bottom {
+  padding-bottom: 10px;
+}
+.p-left {
+  padding-left: 10px;
+}
+.p-right {
+  padding-right: 10px;
+}
+
+.page-medium-dark {
+  padding: 20px;
+  background-color: var(--dark-medium);
+  min-height: 100vh;
+}
+.page-short-dark {
+  padding: 10px;
+  background-color: var(--dark-medium);
+  min-height: 100vh;
+}
+
+.container-grid-app {
+  display: grid;
+  /* grid-template-columns: repeat(4,1fr); */
+  grid-template-areas: "carrito carrito carrito carrito";
+  /* grid-auto-columns: 20px; */
+  /* grid-auto-rows: minmax(30vh, 50vh); */
+  column-gap: 5vw;
+  row-gap: 2vh;
+  /* gap:5vw; */
+  align-items: start;
+}
+
+.child-grid-app-carrito {
+  /* grid-column:1/5; */
+  justify-self: end;
+  grid-area: carrito;
+  padding-right: 10px;
+  /* margin:10px; */
+  /* margin-bottom:-50px; */
+}
+.child-grid-app-carrito .button {
+  padding: 10px;
+  box-sizing:border-box !important;
 }

@@ -1,0 +1,104 @@
+
+.Alert {
+  padding: 5px 7px 7px 8px;
+  background: rgba(var(--blue-light), 1);
+  position: Fixed;
+  /* top: 0; */
+  /* bottom: 3%; */
+  /* right: 0; */
+  /* transform: translate(100%, 0); */
+  transition-duration: 0.3s;
+  /* transition-timing-funciton: ease; */
+  border-radius: 5px;
+  /* box-shadow: 5px 5px 10px black, -5px -5px 10px green; */
+  box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.4);
+  /* transition: */
+  /* animation-name:anim; */
+  /* animation-duration:3s; */
+  /* animation-iteration-count: 3; */
+  /* display: grid; */
+  /* display: flex; */
+  /* grid-template-columns: 1fr 1fr; */
+  /* gap:2px; */
+  /* grid-auto-columns: 20px; */
+  max-width: 300px;
+  /* width: minmax(20px,20px); */
+  max-height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  /* display:flex; */
+  /* max-width: fit-content; */
+}
+
+/* hide horizontal alert*/
+.Alert.corner-bottom-right {
+  /* margin-bottom: 2vw;  */
+  bottom: 0%;
+  right: 0;
+  transform: translate(100%, 0);
+}
+.Alert.corner-bottom-left {
+  bottom: 0;
+  left: 0;
+}
+.Alert.corner-bottom-left.hidden {
+  transform: translate(-100%, 0);
+}
+.Alert.corner-top-left {
+  top: 0;
+  left: 0;
+  /* margin-left:  -100px; */
+  transform: translate(-100%, 0);
+}
+.Alert.corner-top-left.border {
+  margin-top: 2vw;
+  margin-left: 2vw;
+}
+.Alert.corner-top-right {
+  margin-top: 2vh;
+  top: 0;
+  right: 0;
+  transform: translate(100%, 0);
+}
+
+.Alert.success {
+  background: rgba(var(--blue-light), 1);
+}
+.Alert.error {
+  background: var(--error);
+}
+.Alert.warn {
+  background: var(--warn);
+}
+
+.Alert > .piedra {
+  float: right;
+  visibility: hidden;
+  margin-left: 2px;
+}
+.Alert > i {
+  transition-duration: 0.1s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px;
+  margin-top: -3px;
+  margin-right: -3px;
+}
+.Alert > i:hover {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@keyframes anim {
+  0% {
+    transform: translate(100%, 0);
+  }
+  25% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(100%, 0);
+  }
+}

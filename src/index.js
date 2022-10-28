@@ -1,15 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import CarritoContext from "./CarritoContext";
+import TestingPage from "./TestingPage/TestingPage";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import CarritoDetail from "./CarritoDetailComponent";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // changes here
 root.render(
-    <React.StrictMode>
-    <App />
+  <React.StrictMode>
+    <CarritoContext>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<App />} />
+          <Route exact path="/carritoDetails" element={<CarritoDetail />} />
+          <Route exact path="/practica" element={<App />} />
+          <Route exact path="/testingpage" element={<TestingPage />} />
+        </Routes>
+      </Router>
+    </CarritoContext>
   </React.StrictMode>
 );
 

@@ -1,0 +1,113 @@
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.select {
+  user-select: none;
+  cursor: pointer;
+  width: 150px;
+  height: 35px;
+  transition-duration: 0.2s;
+}
+.selected-item {
+  padding: 5px;
+  background: var(--dark-light);
+  /* width: 150px; */
+  /* height: 35px; */
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border-radius: 5px;
+}
+
+.selected-item:focus {
+  /* background:red; */
+  /* border:2px solid var(--warn-dark)  */
+}
+.select:hover {
+  /* transform:scale(1.1) */
+}
+.select-option {
+  padding: 5px;
+  background: var(--dark-light);
+}
+
+.select-option:hover {
+  color: var(--dark-strong);
+  background: var(--green-light);
+}
+
+.container-select-options {
+  display: none;
+  /* visibility:hidden; */
+  position: relative;
+  z-index: 5000 !important;
+  /* position:fixed; */
+  max-height: 500px;
+  /* opacity: 0; */
+  transition: visibility 0.5s, opacity 0.5s;
+}
+
+.active {
+  display: block;
+  background: yellow !important;
+  /* opacity:1; */
+}

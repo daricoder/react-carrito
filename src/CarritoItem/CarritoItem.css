@@ -1,0 +1,102 @@
+
+.item {
+  max-width: 300px;
+  overflow: hidden;
+  transition-duration: 0.2s;
+  /* margin:10px; */
+}
+
+.item-neumorphism {
+  position:relative;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #2b2f38, #24282f);
+  box-shadow: 5px 5px 10px #1a1c21, -5px -5px 10px #363c47;
+  /* z-index:1 */
+}
+
+.item-neumorphism:hover {
+  border-radius: 5px;
+  transform: scale(1.02);
+  box-shadow: 8px 8px 13px #1a1c21, -2px -2px 7px #363c47;
+}
+
+.item-neumorphism > .main,
+.item-neumorphism > .footer {
+  padding: 10px;
+}
+.item-neumorphism > .main {
+  color: var(--light-dark);
+  /* max-height:50px; */
+  /* overflow: scroll; */
+}
+.item-neumorphism > .main > p {
+  font-size: 14px;
+  /* line-height: 0.95 !important; */
+}
+
+.item-neumorphism > .main > .title {
+  font-size: 15px;
+  font-weight: bold;
+  /* font-style:italic; */
+  text-align: center;
+
+  /* line-height: 0.95 !important; */
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  padding: 2px;
+  text-align: center;
+  background-color: var(--dark-light-light);
+  color: var(--green-light);
+  cursor: pointer;
+  /* width: 100%; */
+  border: none;
+  /* text-align: left; */
+  /* outline: none; */
+  /* font-size: 15px; */
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.collapsible:hover {
+  /* background-color: #ccc; */
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  /* padding: 0 18px; */
+  /* display: none; */
+  overflow: hidden;
+  /* background-color: #f1f1f1; */
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.divider {
+  /* padding:2px;  */
+  /* display:block; */
+  background-color: var(--light-dark);
+  height: 1px;
+  width: 20%;
+  border-radius: 15px;
+}
+.description {
+  padding: 15px 8px 15px 8px;
+  font-size: 12px;
+  /* font-weight:bold; */
+  font-style: italic;
+  /* text-align:center; */
+}
+
+.header {
+  /* overflow:hidden;  */
+  position: relative;
+  min-height: 150px !important  ;
+  max-height: 200px !important  ;
+  height: 20vw;
+  /* border:2px solid red; */
+  /* text-decoration:none  */
+ /* z-index:-1;  */
+}
