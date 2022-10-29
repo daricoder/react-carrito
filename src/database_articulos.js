@@ -25,7 +25,7 @@ let articulos = [
   },
   {
     "id": 4,
-    "name": "pantalon rojo 1",
+    "name": "pantalon lila",
     "category": "bottom",
     "price": 30,
     "stock": 2,

@@ -6,7 +6,9 @@ import "./App.css";
 import CarritoItem from "./CarritoItem/CarritoItem";
 import Table from "./TableComponent";
 import Prueba from "./prueba";
+import {clearAll} from "./Alert/Alert";
 function App() {
+  // clearAll();
   let {
     articulo_headers,
     articulos,
@@ -24,7 +26,7 @@ function App() {
       <div className="container-grid-app">
         <div className="child-grid-app-carrito">
           <Link className="link" to="/carritoDetails">
-            <div className="button button-neumorphism">
+            <div className="button button-neumorphism" onClick={clearAll}>
               Carrito({selectedItems.length})
             </div>
           </Link>

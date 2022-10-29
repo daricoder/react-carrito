@@ -1,12 +1,13 @@
 import Alert from "../Alert/Alert";
 import { useState } from "react";
-import { showNotification } from "../Alert/Alert";
+import { showNotification, clearAll} from "../Alert/Alert";
 
 let alert = {
   message: "a a a a a  a a a a a a",
-  // color: "warn",
-  position: "corner-bottom-right",
-  // type: "fixed"
+  color: "error",
+  position: "corner-bottom-left",
+  type: "fixed",
+  margin:15
 };
 
 const TestingPage = () => {
@@ -20,6 +21,12 @@ const TestingPage = () => {
         onClick={() => showNotification(alert)}
       >
         show alert
+      </div>
+      <div
+        className="button button-neumorphism"
+        onClick={() => clearAll()}
+      >
+        clear all
       </div>
     </div>
   );

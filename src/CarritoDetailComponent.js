@@ -1,7 +1,9 @@
 import { useContext, useState } from "react";
 import { CarritoContext } from "./CarritoContext";
 import CarritoItem from "./CarritoItem/CarritoItem";
+import { showNotification, clearAll } from "./Alert/Alert";
 let T = (props) => {
+  // clearAll();
   let {
     articulo_headers,
     articulos,
@@ -27,6 +29,12 @@ let T = (props) => {
   ));
   return (
     <>
+      <div
+        className="button button-neumorphism"
+        onClick={() => showNotification({ message: "hola pendejo", type: "fixed", color: "error" })}
+      >
+        show alert
+      </div>
       {/* 
 
 <div className="CarritoDetail">
@@ -45,9 +53,7 @@ let T = (props) => {
       <div className="page-short-dark ">
         <div className="grid-CarritoDetail">
           <div>
-            <div>
-              Carrito Detail
-            </div>
+            <div>Carrito Detail</div>
           </div>
           <div>
             <table>
@@ -58,9 +64,7 @@ let T = (props) => {
             </table>
           </div>
           <div>
-            <div className="button button-neumorphism">
-              Proceder al Pago
-            </div>
+            <div className="button button-neumorphism">Proceder al Pago</div>
           </div>
         </div>
       </div>

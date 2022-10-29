@@ -35,6 +35,8 @@
   /* margin-bottom: 2vw;  */
   bottom: 0%;
   right: 0;
+}
+.Alert.corner-bottom-right.hidden {
   transform: translate(100%, 0);
 }
 .Alert.corner-bottom-left {
@@ -47,17 +49,17 @@
 .Alert.corner-top-left {
   top: 0;
   left: 0;
-  /* margin-left:  -100px; */
-  transform: translate(-100%, 0);
 }
-.Alert.corner-top-left.border {
-  margin-top: 2vw;
-  margin-left: 2vw;
+.Alert.corner-top-left.hidden {
+  transform: translate(-100%, 0);
 }
 .Alert.corner-top-right {
   margin-top: 2vh;
   top: 0;
   right: 0;
+  /* transform: translate(100%, 0); */
+}
+.Alert.corner-top-right.hidden {
   transform: translate(100%, 0);
 }
 
