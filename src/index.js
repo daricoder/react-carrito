@@ -17,7 +17,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <CarritoContext>
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router basename="/react-carrito">
         <Routes>
           <Route exact path="/" element={<App />} />
           <Route exact path="/carritoDetail" element={<CarritoDetail />} />
