@@ -1,0 +1,147 @@
+.form-neumorphism {
+  /* left: 50%; /
+  /* top: 50%; */
+  /* transform: translate(-50%, -50%); */
+  position: absolute;
+  padding: 10px;
+  max-width: fit-content;
+  /* border: 1px solid red; */
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+                       box-shadow: 5px 5px 10px #abadb0, -5px -5px 10px #ffffff;
+                       background: linear-gradient(145deg, #eaeef1, #c5c8cb);
+}
+.form-neumorphism:hover {
+  /* transform: translate(-50%, -50%) scale(1.02, 1.02); */
+box-shadow:  4px 4px 10px #a9abad,
+             -4px -4px 10px #ffffff;
+}
+
+.form-neumorphism > .header {
+  color: var(--light-dark);
+  /* font-style:oblique;  */
+  text-align: center;
+}
+.form-neumorphism > .body {
+  padding: 10px;
+}
+.input-neumorphism {
+  /* display: inline-block;     */
+  /* position:relative; */
+  /* padding: 20px; */
+  /* display:flex; */
+  /* float:right; */
+  /* width:100%; */
+  /* height:100px; */
+  /* height:50px; */
+  /* width:20px; */
+  /* height:4vw; */
+  /* height:auto; */
+  /* padding-top:100%; */
+  /* padding:10px; */
+  /* cursor: pointer; */
+  display: block;
+  padding: 10px 20px 10px 20px;
+  border: none;
+  border-radius: 25px;
+  transition-duration: 0.2s;
+  /* background: linear-gradient(145deg, #2b2f38, #24282f); */
+  /* box-shadow:  6px 6px 12px #22262d, */
+  /* -6px -6px 12px #2e323b; */
+  /* box-shadow: 5px 5px 10px #1a1c21, -5px -5px 10px #363c47; */
+  /* margin-left: auto; */
+  color: var(--light-dark);
+  font-size: 15px;
+  font-style: oblique;
+  /* font-family: 'Averia Libre', cursive; */
+  font-family: "Yuji Boku", serif;
+  background: var(--light-material);
+box-shadow: inset 4px 4px 10px #a9abad,
+            inset -4px -4px 10px #ffffff;
+}
+.input-container > textarea.input-neumorphism {
+  resize: vertical;
+}
+.input-neumorphism:focus {
+  outline: none !important;
+}
+
+.input-container {
+  font-family: "Yuji Boku", serif;
+  position: relative;
+  margin-bottom: 20px;
+  /* border:1px solid red; */
+}
+.input-icon {
+  /* font-family: 'Averia Libre', cursive; */
+  /* font-family: 'Baloo Da 2', cursive; */
+  /* font-family: 'Calligraffitti', cursive; */
+  /* font-family: 'Edu QLD Beginner', cursive; */
+  /* font-family: 'Itim', cursive; */
+  /* font-family: 'Kalam', cursive; */
+  /* font-family: 'M PLUS Rounded 1c', sans-serif; */
+  /* font-family: 'Macondo', cursive; */
+  /* font-family: 'Marck Script', cursive; */
+  /* font-family: 'Marvel', sans-serif; */
+  /* font-family: 'Nanum Brush Script', cursive; */
+  /* font-family: 'Nanum Pen Script', cursive; */
+  /* font-family: 'Overlock', cursive; */
+  /* font-family: 'Poiret One', cursive; */
+  /* font-family: 'Ruluko', sans-serif; */
+  /* font-family: 'Sacramento', cursive; */
+  /* font-family: 'Satisfy', cursive; */
+  /* font-family: 'Sniglet', cursive; */
+  /* font-family: 'Snippet', sans-serif; */
+  /* font-family: 'Sofia', cursive; */
+  /* font-family: 'Tillana', cursive; */
+  /* font-family: 'Yuji Boku', serif; */
+  color: var(--light-dark);
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin-left: 20px;
+  font-style: oblique;
+  font-size: 23px;
+}
+.form-neumorphism > .footer {
+  padding: 0 8px 0 8px;
+  margin-bottom: 10px;
+  /* border: 1px solid red; */
+}
+
+.button-form-neumorphism {
+  user-select: none;
+  padding: 5px 10px 5px 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  text-align: center;
+  color: var(--light-dark);
+  box-shadow: 5px 5px 10px #abadb0, -5px -5px 10px #ffffff;
+  /* z-index:1 */
+  background: linear-gradient(145deg, #eaeef1, #c5c8cb);
+}
+.button-form-neumorphism:hover {
+  /* background: linear-gradient(145deg, #24282f, #2b2f38); */
+  /* box-shadow: 3px 3px 10px #16181c, -3px -3px 10px #3a404c; */
+  background: var(--green-mint);
+  box-shadow:  4px 4px 10px #a9abad,
+               -4px -4px 10px #ffffff;
+}
+.button-form-neumorphism:active {
+color: var(--green-light);
+background: var(--dark);
+box-shadow: inset 5px 5px 10px #101214,inset -5px -5px 10px #20242a;
+}
+
+.icon-container-circle {
+  text-align: center;
+  margin: 10px 10px;
+}
+
+.icon-container-circle > i {
+  color: var(--green-mint-gray);
+  /* border-radius:20px; */
+  font-size: 30px;
+  /* border:2px solid var(--light-dark) */
+}

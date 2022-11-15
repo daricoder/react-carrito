@@ -93,7 +93,7 @@ let Select = () => {
     <>
 
       <div className="select">
-        <div tabIndex={0} className="selected-item" onClick={(e) => handleSelectedItem(e)} onBlur={(e) => handleBlur(e)}>
+        <div tabIndex={0} className="selected-item button-neumorphism" onClick={(e) => handleSelectedItem(e)} onBlur={(e) => handleBlur(e)}>
           <span>{selectedItem.option}</span>
         </div>
         <div className={`container-select-options ${active ? 'active' : ''}`} onBlur={(e) => handleBlur(e)}>{options2_jsx}</div>

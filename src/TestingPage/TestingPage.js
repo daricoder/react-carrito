@@ -1,13 +1,13 @@
 import Alert from "../Alert/Alert";
 import { useState } from "react";
-import { showNotification, clearAll} from "../Alert/Alert";
+import { showNotification, clearAll } from "../Alert/Alert";
 
 let alert = {
   message: "a a a a a  a a a a a a",
   color: "error",
   position: "corner-bottom-left",
   type: "fixed",
-  margin:15
+  margin: 5
 };
 
 const TestingPage = () => {
