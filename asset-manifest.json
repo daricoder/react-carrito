@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react-carrito/static/css/main.17b0ef65.css",
-    "main.js": "/react-carrito/static/js/main.a0c30d4d.js",
+    "main.css": "/react-carrito/static/css/main.5d9a35d3.css",
+    "main.js": "/react-carrito/static/js/main.c943233f.js",
     "static/js/787.28cb0dcd.chunk.js": "/react-carrito/static/js/787.28cb0dcd.chunk.js",
     "static/media/logo.svg": "/react-carrito/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/react-carrito/index.html",
-    "main.17b0ef65.css.map": "/react-carrito/static/css/main.17b0ef65.css.map",
-    "main.a0c30d4d.js.map": "/react-carrito/static/js/main.a0c30d4d.js.map",
+    "main.5d9a35d3.css.map": "/react-carrito/static/css/main.5d9a35d3.css.map",
+    "main.c943233f.js.map": "/react-carrito/static/js/main.c943233f.js.map",
     "787.28cb0dcd.chunk.js.map": "/react-carrito/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.17b0ef65.css",
-    "static/js/main.a0c30d4d.js"
+    "static/css/main.5d9a35d3.css",
+    "static/js/main.c943233f.js"
   ]
 }
