@@ -45,7 +45,7 @@ width:100%;
   display: inline-block;
   /* position:relative; */
   /* left:50%; */
-  background: black;
+  background: var(--background);
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -55,13 +55,13 @@ width:100%;
 
 .badge:hover,
 .badge-current:hover {
-  transform: scale(1.4);
+  transform: scale(1.8);
 }
 .badge-current {
   /* box-sizing:border-box; */
   /* border-box:content-box; */
   transform: scale(1.5);
-  border: 2px solid var(--green-mint);
+  border: 2px solid var(--primary);
   background: none;
 }
 
@@ -71,10 +71,12 @@ width:100%;
   margin: 0 5px 0 5px;
   cursor: pointer;
   transition-duration: 0.1s;
+  color: var(--background);
 }
 
 .slider-control-arrow:hover {
   transform: scale(2);
+  color: var(--primary);
 }
 
 .slider-control-arrow-next {

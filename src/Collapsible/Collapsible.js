@@ -1,15 +1,11 @@
-import "./Collapsible.css"
+import "./Collapsible.css";
 
 const Collapsible = () => {
-  return (
-    <div>
-
-    </div>
-  )
-}
+  return <div></div>;
+};
 
 function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 const handleCollapsible = async (e) => {
   let element = e.currentTarget;
@@ -23,65 +19,82 @@ const handleCollapsible = async (e) => {
   //
   let show = true;
   if (content.style.maxHeight) {
-    show = false
+    show = false;
   }
   let lastparent = element;
   let temp = lastparent;
   let cont = null;
-  let count = 0
+  let count = 0;
 
   while (true) {
-    let isLast = false
-    cont = lastparent.nextElementSibling
+    let isLast = false;
+    cont = lastparent.nextElementSibling;
     if (!lastparent.classList.contains("collapsible") || !cont) {
       break;
     }
-    if (!lastparent.parentNode.previousElementSibling.classList.contains("collapsible")) {
+    if (
+      !lastparent.parentNode.previousElementSibling.classList.contains(
+        "collapsible"
+      )
+    ) {
       isLast = true;
     }
     if (show) {
-
-      console.log('parent', lastparent, 'cont', cont, 'heightcont', cont.scrollHeight, cont.clientHeight, cont.style.maxHeight)
+      console.log(
+        "parent",
+        lastparent,
+        "cont",
+        cont,
+        "heightcont",
+        cont.scrollHeight,
+        cont.clientHeight,
+        cont.style.maxHeight
+      );
 
       if (isLast) {
         cont.style.transition = null;
       } else {
         cont.style.transition = "max-height 0s";
       }
-      cont.style.maxHeight = cont.scrollHeight + "px"
-      let icon = lastparent.querySelector('.icon-container')
+      cont.style.maxHeight = cont.scrollHeight + "px";
+      let icon = lastparent.querySelector(".icon-container");
       if (count == 0 && icon) {
-        icon.style.transform = "rotate(180deg)"
-
+        icon.style.transform = "rotate(180deg)";
       }
-      lastparent = lastparent.parentNode.previousElementSibling
-
-    } else {//hide
-      let icon = lastparent.querySelector('.icon-container')
+      lastparent = lastparent.parentNode.previousElementSibling;
+    } else {
+      //hide
+      let icon = lastparent.querySelector(".icon-container");
       if (count == 0 && icon) {
-        icon.style.transform = null
+        icon.style.transform = null;
       }
 
-      console.log('hide')
-      console.log('parent', lastparent, 'cont', cont, 'heightcont', cont.scrollHeight, cont.clientHeight, cont.style.maxHeight)
+      console.log("hide");
+      console.log(
+        "parent",
+        lastparent,
+        "cont",
+        cont,
+        "heightcont",
+        cont.scrollHeight,
+        cont.clientHeight,
+        cont.style.maxHeight
+      );
       if (count == 0) {
-        console.log('await')
+        console.log("await");
         cont.style.transition = null;
         cont.style.maxHeight = null;
-        await sleep(200)
+        await sleep(200);
       } else {
-
         cont.style.transition = "max-height 0s";
-        cont.style.maxHeight = cont.scrollHeight + "px"
+        cont.style.maxHeight = cont.scrollHeight + "px";
       }
-      lastparent = lastparent.parentNode.previousElementSibling
-
-
+      lastparent = lastparent.parentNode.previousElementSibling;
     }
 
     count = count + 1;
   }
 };
 
-export { handleCollapsible }
-export default Collapsible
+export { handleCollapsible };
+export default Collapsible;
