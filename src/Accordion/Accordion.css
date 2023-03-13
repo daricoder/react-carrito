@@ -1,0 +1,28 @@
+.accordion {
+  border-radius: 6px;
+  padding: 1.5em;
+  width: 70%;
+  box-shadow: 0 0 10px -3px rgb(0, 0, 0, 0.5);
+  border-left: 4px solid green;
+}
+
+.accordion_item {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: 0.3s grid-template-rows;
+}
+
+.accordion_item > p {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.accordion:has(:checked) > .accordion_item {
+  grid-template-rows: 1fr;
+  /* max-height: 100%; */
+}
+
+.accordion_link > input {
+  display: none;
+}

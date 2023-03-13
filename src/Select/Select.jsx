@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./Select.css"
+import { CarritoContext } from "../CarritoContext";
 let options = ["option1", "option2", "option3"];
 
 let options2 = [
@@ -13,6 +14,14 @@ let Select = () => {
   let [active, setActive] = useState(false);
   let [optionClicked, setOptionClicked] = useState(false);
   let [hoverOption, setHoverOption] = useState(false);
+  let {
+    articulo_headers,
+    articulos,
+    setArticulos,
+    selectedItems,
+    setSelectedItems,
+    theme
+  } = useContext(CarritoContext);
 
 
   let handleOption = (e, optionRef) => {
@@ -72,7 +81,7 @@ let Select = () => {
   let options2_jsx = options2.map((option2, index) => {
     return (
       <div
-        className="select-option"
+        className={`select-option ${theme.title}`}
         key={index}
         onMouseOver={(e) => {
           handleOptionMouseOver(e);
@@ -92,11 +101,11 @@ let Select = () => {
   return (
     <>
 
-      <div className="select">
-        <div tabIndex={0} className="selected-item button-neumorphism" onClick={(e) => handleSelectedItem(e)} onBlur={(e) => handleBlur(e)}>
+      <div className={`select`}>
+        <div tabIndex={0} className={`selected-item button ${theme.title}`} onClick={(e) => handleSelectedItem(e)} onBlur={(e) => handleBlur(e)}>
           <span>{selectedItem.option}</span>
         </div>
-        <div className={`container-select-options ${active ? 'active' : ''}`} onBlur={(e) => handleBlur(e)}>{options2_jsx}</div>
+        <div className={`container-select-options ${active ? 'active' : ''} ${theme.title}`} onBlur={(e) => handleBlur(e)}>{options2_jsx}</div>
       </div>
     </>
   );

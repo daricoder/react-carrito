@@ -15,19 +15,17 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // changes here
 root.render(
-  <React.StrictMode>
-    <CarritoContext>
-      <Router basename="/react-carrito">
-        <Routes>
-          <Route exact path="/" element={<App />} />
-          <Route exact path="/carritoDetail" element={<CarritoDetail />} />
-          <Route exact path="/practica" element={<App />} />
-          <Route exact path="/testingpage" element={<TestingPage />} />
-          <Route exact path="/admin" element={<AdminPage />} />
-        </Routes>
-      </Router>
-    </CarritoContext>
-  </React.StrictMode>
+  <CarritoContext>
+    <Router basename="/react-carrito">
+      <Routes>
+        <Route exact path="/" element={<App />} />
+        <Route exact path="/carritoDetail" element={<CarritoDetail />} />
+        <Route exact path="/practica" element={<App />} />
+        <Route exact path="/testingpage" element={<TestingPage />} />
+        <Route exact path="/admin" element={<AdminPage />} />
+      </Routes>
+    </Router>
+  </CarritoContext>
 );
 
 // If you want to start measuring performance in your app, pass a function

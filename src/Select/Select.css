@@ -1,86 +1,18 @@
-/* The container must be positioned relative: */
-.custom-select {
-  position: relative;
-  font-family: Arial;
-}
-
-.custom-select select {
-  display: none; /*hide original SELECT element: */
-}
-
-.select-selected {
-  background-color: DodgerBlue;
-}
-
-/* Style the arrow inside the select element: */
-.select-selected:after {
-  position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
-}
-
-/* Point the arrow upwards when the select box is open (active): */
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 7px;
-}
-
-/* style the items (options), including the selected item: */
-.select-items div,
-.select-selected {
-  color: #ffffff;
-  padding: 8px 16px;
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-  cursor: pointer;
-}
-
-/* Style items (options): */
-.select-items {
-  position: absolute;
-  background-color: DodgerBlue;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
-}
-
-/* Hide the items when the select box is closed: */
-.select-hide {
-  display: none;
-}
-
-.select-items div:hover,
-.same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
 .select {
   user-select: none;
   cursor: pointer;
   width: 150px;
   /* height: 35px; */
   transition-duration: 0.2s;
-  
-  
 }
 .selected-item {
   padding: 5px;
-  /* background: var(--light-material); */
-  /* width: 150px; */
-  /* height: 35px; */
   display: flex;
   align-items: center;
   justify-content: start;
   border-radius: 2px;
-background: #dbdee1;
-box-shadow:  3px 4px 10px #a9abad,
-             -4px -4px 10px #ffffff;
+  background: var(--extra1,white);
+  
 }
 
 .selected-item:focus {
@@ -92,12 +24,12 @@ box-shadow:  3px 4px 10px #a9abad,
 }
 .select-option {
   padding: 5px;
-  background: rgba(var(--light-material-rgb),0.2);
+  /* background: none!important; */
 }
 
 .select-option:hover {
-  color: var(--dark-strong);
-  background: var(--green-light);
+  color: var(--secundary);
+  background: var(--primary);
 }
 
 .container-select-options {
@@ -110,9 +42,10 @@ box-shadow:  3px 4px 10px #a9abad,
   /* opacity: 0; */
   transition: visibility 0.5s, opacity 0.5s;
   /* overflow:scroll; */
+  background: rgba(var(--background-rgb),1);
+  box-shadow: 0px 6px 15px -6px black;
 }
 
 .active {
   display: block;
-      background: var(--light-material) 
 }

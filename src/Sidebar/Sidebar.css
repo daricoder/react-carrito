@@ -13,7 +13,7 @@
   transition-timing-function: ease;
 
   transform: translateX(-100%);
-  background: var(--light-material);
+  background: var(--background);
   outline: none;
 }
 

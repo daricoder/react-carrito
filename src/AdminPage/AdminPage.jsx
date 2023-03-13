@@ -41,9 +41,9 @@ const AdminPage = () => {
   };
 
   return (
-    <div className="page-short-dark ">
+    <div className="page-short">
       BIENVENIDO PUTO ADMIN
-    <Form className="Form"/>
+      <Form className="Form" />
     </div >
   );
 };
