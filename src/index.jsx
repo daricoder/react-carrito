@@ -5,13 +5,12 @@ import App from "./App";
 import CarritoContext from "./CarritoContext";
 import TestingPage from "./TestingPage/TestingPage";
 import AdminPage from "./AdminPage/AdminPage";
-import reportWebVitals from "./reportWebVitals";
+// import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import CarritoDetail from "./CarritoDetailComponent";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
 
 // changes here
 root.render(
@@ -25,7 +24,7 @@ root.render(
         <Route exact path="/admin" element={<AdminPage />} />
       </Routes>
     </Router>
-  </CarritoContext>
+  </CarritoContext>,
 );
 
 // If you want to start measuring performance in your app, pass a function
