@@ -12,7 +12,7 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "deploy": "npm i && npm run build && cp dist ~/.cache && git reset --hard HEAD &&  rm -rf ~/.cache/react-carrito; mkdir ~/.cache/react-carrito && git clone git@github.com:daricoder/react-carrito.git ~/.cache/react-carrito && cd ~/.cache/react-carrito && echo 'git checkout gh-pages .......' && git checkout gh-pages && echo 'rm -rf *  ....' && rm -rf * && echo 'cp -vr ~/.cache/dist/*   ....' && cp -vr ~/.cache/dist/* . && echo 'git add .   ....' && git add . && echo 'commit and push to gh-pages  ......' && git commit -m 'updates new' && git push origin gh-pages"
+    "deploy": "npm i && npm run build && cp -r dist ~/.cache && git reset --hard HEAD &&  rm -rf ~/.cache/react-carrito; mkdir ~/.cache/react-carrito && git clone git@github.com:daricoder/react-carrito.git ~/.cache/react-carrito && cd ~/.cache/react-carrito && echo 'git checkout gh-pages .......' && git checkout gh-pages && echo 'rm -rf *  ....' && rm -rf * && echo 'cp -vr ~/.cache/dist/*   ....' && cp -vr ~/.cache/dist/* . && echo 'git add .   ....' && git add . && echo 'commit and push to gh-pages  ......' && git commit -m 'updates new' && git push origin gh-pages"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
